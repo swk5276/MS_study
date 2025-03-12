@@ -47,7 +47,7 @@ print(set(mat))
 student ={"반장":"홍길동","부반장":"김길동"}
 print(student)
 print(type(student))
-print(student["반장"])``
+print(student["반장"])
 # list: 1->30
 # set : 1->?
 

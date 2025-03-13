@@ -35,3 +35,54 @@ def check_condition(n):
     result = [name for value, name in options.items() if n & value]
 
     return " + ".join(result) if result else "선택된 옵션 없음"
+
+def location():
+    n = int(input())
+    
+    result = ""
+    
+    if n & 1: result += "와이파이 + "
+    if n & 2: result += "주차장 + "
+    if n & 4: result += "흡연실 + "
+    if n & 8: result += "24시간 + "
+    
+    return result[:-3] if result else "선택된 옵션 없음"
+
+print(location())
+
+
+def location():
+    n = int(input())
+
+    a1 = "와이파이"
+    a2 = "주차장"
+    a3 = "흡연실"
+    a4 = "24시간"
+
+    result = ""
+
+    if n >= 8:
+        result += a4
+        n -= 8
+        if n > 0:
+            result += " + "
+    
+    if n >= 4:
+        result += a3
+        n -= 4
+        if n > 0:
+            result += " + "
+    
+    if n >= 2:
+        result += a2
+        n -= 2
+        if n > 0:
+            result += " + "
+    
+    if n >= 1:
+        result += a1
+
+    return result if result else "선택된 옵션 없음"
+
+print(location())
+

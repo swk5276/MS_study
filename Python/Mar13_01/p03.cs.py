@@ -8,24 +8,6 @@ value = 1
 # 12이면 흡연실 24시간
 # 13 흡연실 24시 와이파이
 # 7 흡연실 주차장 와이파이
-def location():
-    n = int(input())
-    a1= "와이파이"
-    a2= "주차장"
-    a3= "흡연실"
-    a4= "24시간"
-    if n==1:
-        result =a1
-    elif n==2:
-        result =a2
-    elif n==4:
-        result =a3
-    elif n==3:
-        result =a1+a2
-    elif n==8:
-        result =a3+a4
-    return result
-print(location())
 
 def check_condition(n):
     # 각 숫자에 해당하는 옵션을 미리 딕셔너리로 정의
@@ -36,11 +18,14 @@ def check_condition(n):
 
     return " + ".join(result) if result else "선택된 옵션 없음"
 
-def location():
+def location1():
     n = int(input())
     
     result = ""
-    
+    # 1
+    # 10 = 2
+    # 100 = 4
+    # 1101 = 13
     if n & 1: result += "와이파이 + "
     if n & 2: result += "주차장 + "
     if n & 4: result += "흡연실 + "
@@ -48,10 +33,10 @@ def location():
     
     return result[:-3] if result else "선택된 옵션 없음"
 
-print(location())
+print(location1())
 
 
-def location():
+""" def location():
     n = int(input())
 
     a1 = "와이파이"
@@ -84,5 +69,5 @@ def location():
 
     return result if result else "선택된 옵션 없음"
 
-print(location())
+print(location()) """
 
